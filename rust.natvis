@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="collections::vec::Vec&lt;*&gt;">
+    <DisplayString Condition="len == 0">empty</DisplayString>
+    <DisplayString Condition="len &gt; 0">len={len}</DisplayString>
+    <Expand>
+      <ArrayItems Condition="len &gt; 0">
+	<Size>len</Size>
+	<ValuePointer>buf.ptr.pointer.__0</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+</AutoVisualizer>
